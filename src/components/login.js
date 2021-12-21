@@ -1,7 +1,12 @@
+
 export default function Login(props) {
 
     return (
-    <form className="login">
+    <div className="login">
+    <div className="login__banner">
+        <div className="login__bannerIMG"></div>
+    </div>
+    <form className="login__form">
         <h2 className="login__logo">INSTAGRAM</h2>
 
         <label for="loginID" className="login__name">
@@ -16,6 +21,6 @@ export default function Login(props) {
 
         <input type="submit" className="login__submit" value="Log In"></input>
     </form>
+    </div>
     );
-    
 }

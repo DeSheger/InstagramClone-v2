@@ -29,20 +29,81 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 10px;
   background-color: #fff; }
+  .login__banner {
+    display: none;
+    height: 570px;
+    width: 285px;
+    margin-right: 20px; }
+    .login__bannerIMG {
+      height: 100%;
+      width: 100%;
+      background-image: url("https://cdn.pixabay.com/photo/2013/07/13/12/46/iphone-160307_960_720.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative; }
+    .login__bannerIMG::before {
+      content: '';
+      position: absolute;
+      background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg");
+      -webkit-animation: backgroundBanner 12s step-end;
+      animation: backgroundBanner 12s step-end;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 84px;
+      left: 30px;
+      height: 407px;
+      width: 229px;
+      z-index: 2; }
+    .login__bannerIMG::after {
+      content: '';
+      position: absolute;
+      background-color: black;
+      top: 84px;
+      left: 30px;
+      height: 407px;
+      width: 229px; }
+    @media (min-width: 800px) {
+      .login__banner {
+        display: block; } }
+  .login__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff; }
+    @media (min-width: 800px) {
+      .login__form {
+        width: 350px;
+        height: 550px;
+        border: 1px solid #a5a5a5;
+        border-radius: 4px; } }
   .login__logo {
     text-align: center;
     font-family: 'Pushster', cursive;
@@ -62,10 +123,10 @@
     width: 256px;
     height: auto;
     margin-bottom: 6px;
-    border: 1px solid #8e8e8e;
+    border: 1px solid #a5a5a5;
     border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #8e8e8e; }
+    color: #a5a5a5; }
     .login__name span {
       height: auto;
       padding: 3px;
@@ -85,12 +146,12 @@
             flex-direction: column;
     width: 256px;
     height: auto;
-    border: 1px solid #8e8e8e;
+    border: 1px solid #a5a5a5;
     border-radius: 4px;
     font-weight: bold;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #8e8e8e; }
+    color: #a5a5a5; }
     .login__password span {
       height: auto;
       padding: 3px;
@@ -108,9 +169,26 @@
     border: none;
     border-radius: 4px;
     color: white;
-    background-color: #0095f6; }
-  @media (min-width: 800px) {
-    .login {
-      width: 45%;
-      height: 80%; } }
+    background-color: #0095f6;
+    cursor: pointer; }
+
+@-webkit-keyframes backgroundBanner {
+  20% {
+    background-image: url("https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg"); }
+  40% {
+    background-image: url("https://cdn.pixabay.com/photo/2020/06/18/18/53/the-cliffs-5314651_960_720.jpg"); }
+  60% {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg"); }
+  80% {
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"); } }
+
+@keyframes backgroundBanner {
+  20% {
+    background-image: url("https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg"); }
+  40% {
+    background-image: url("https://cdn.pixabay.com/photo/2020/06/18/18/53/the-cliffs-5314651_960_720.jpg"); }
+  60% {
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg"); }
+  80% {
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"); } }
 /*# sourceMappingURL=main.css.map */
