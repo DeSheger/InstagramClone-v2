@@ -1,0 +1,11 @@
+import React from "react";
+
+class Favourite extends React.Component {
+
+    render() {
+        return (
+            <>
+            </>
+        );
+    }
+}
