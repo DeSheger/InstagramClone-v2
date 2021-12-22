@@ -7,7 +7,7 @@ export default function Login(props) {
         <div className="login__bannerIMG"></div>
     </div>
     <form className="login__form">
-        <h2 className="login__logo">INSTAGRAM</h2>
+        <h2 className="login__logo">Instagram</h2>
 
         <label for="loginID" className="login__name">
             <span>Type nickname ...</span>

@@ -3,5 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+*:focus {
+    outline: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import 'containers', 'components';
