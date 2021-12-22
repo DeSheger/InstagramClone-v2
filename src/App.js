@@ -1,17 +1,15 @@
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { menuHandler } from './features/menu/menuSlice';
-import Start from './containers/Start';
+import { showContainer } from './components/menu';
 
 function App() {
   const menu = useSelector(state => state.menu);
-  const dispatch = useDispatch();
-  console.log(menu)
 
+  // Component App show active container 
   return (
     <div className="wrapper">
-      <Start />
+      {showContainer(menu)}
     </div>
   );
 }

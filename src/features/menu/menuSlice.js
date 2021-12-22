@@ -2,10 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { current } from "@reduxjs/toolkit";
 
 const initialState = [
-    {name: 'home', value: false},
-    {name: 'explore', value: true},
-    {name: 'favourite', value: false},
-    {name: 'profile', value: false},
+    {name: 'Home', value: false},
+    {name: 'Explore', value: false},
+    {name: 'Favourite', value: false},
+    {name: 'Profile', value: false},
+    {name: 'Start', value: true},
 ]
 
 const menuSlice = createSlice({
