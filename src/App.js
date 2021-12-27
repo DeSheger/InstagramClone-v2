@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { showContainer } from './components/menu';
 
 function App() {
-  const menu = useSelector(state => state.menu);
+  const containers = useSelector(state => state.container);
 
   // Component App show active container 
   return (
     <div className="wrapper">
-      {showContainer(menu)}
+      {showContainer(containers)}
     </div>
   );
 }

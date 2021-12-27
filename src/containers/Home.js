@@ -1,11 +1,13 @@
 import React from "react";
+import Menu from "../components/menu";
 
-class Home extends React.Component {
+export default class Home extends React.Component {
 
     render() {
         return (
-            <>
-            </>
+            <div className="home">
+                <Menu/>
+            </div>
         );
     }
 }

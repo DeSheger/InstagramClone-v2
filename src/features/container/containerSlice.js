@@ -2,18 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 import { current } from "@reduxjs/toolkit";
 
 const initialState = [
-    {name: 'Home', value: false},
+    {name: 'Home', value: true},
     {name: 'Explore', value: false},
     {name: 'Favourite', value: false},
     {name: 'Profile', value: false},
-    {name: 'Start', value: true},
+    {name: 'Start', value: false},
 ]
 
-const menuSlice = createSlice({
+const containerSlice = createSlice({
     name: 'menu',
     initialState,
     reducers: {
-        menuHandler(state, action) {
+        containerHandler(state, action) {
             let newState = current(state)
             const changeState = newState.map(item => {
                 if(item.name === action.payload.name) {
@@ -28,8 +28,8 @@ const menuSlice = createSlice({
     }
 })
 
-export const {menuHandler} = menuSlice.actions;
-export default menuSlice.reducer;
+export const {containerHandler} = containerSlice.actions;
+export default containerSlice.reducer;
 
 
 

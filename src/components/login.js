@@ -1,3 +1,7 @@
+function loginHandler(e) {
+    e.preventDefault();
+
+}
 
 export default function Login(props) {
 
@@ -6,12 +10,12 @@ export default function Login(props) {
     <div className="login__banner">
         <div className="login__bannerIMG"></div>
     </div>
-    <form className="login__form">
+    <form action="http://localhost:6000/userInfo" className="login__form">
         <h2 className="login__logo">Instagram</h2>
 
         <label for="loginID" className="login__name">
             <span>Type nickname ...</span>
-            <input id="loginID" type="text" aria-label="Type nickname ..." aria-required="true"></input>
+            <input id="loginID" type="text"></input>
         </label>
             
         <label for="passwordID" className="login__name">

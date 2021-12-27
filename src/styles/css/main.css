@@ -1,12 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script&family=Pushster&family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  font-family: Roboto,Arial, Helvetica, sans-serif; }
 
 *:focus {
   outline: none; }
+
+#root {
+  width: 100%;
+  height: auto; }
+
+.wrapper {
+  width: 100%;
+  height: 100vh; }
 
 .start {
   display: -webkit-box;
@@ -18,11 +28,31 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: #fafafa; }
   @media (min-width: 800px) {
     .start {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200%;
+  width: 100%;
+  background-color: #fafafa; }
+  @media (min-width: 800px) {
+    .home {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -105,6 +135,7 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    height: 100%;
     padding: 10px;
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 2px 0px black;
@@ -204,4 +235,95 @@
     background-image: url("https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_960_720.jpg"); }
   100% {
     background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"); } }
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%; }
+  .navigation__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #a5a5a5; }
+    @media (min-width: 800px) {
+      .navigation__form {
+        width: 50%; } }
+  .navigation__text {
+    height: 36px;
+    padding: 0 6px;
+    width: 50%;
+    border: 1px solid #a5a5a5;
+    background-color: #f9f9f9; }
+  .navigation__logo {
+    font-family: 'Lobster', cursive; }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    background-color: #fff;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: none; }
+    @media (min-width: 800px) {
+      .navigation__list {
+        width: 50%;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        top: 0;
+        left: 50%;
+        border-bottom: 1px solid #a5a5a5;
+        border-top: none; } }
+  .navigation__item {
+    height: 22px;
+    width: auto;
+    cursor: pointer; }
+    .navigation__item img {
+      height: 100%;
+      width: auto; }
 /*# sourceMappingURL=main.css.map */
