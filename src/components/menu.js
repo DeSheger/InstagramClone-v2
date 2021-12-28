@@ -25,7 +25,7 @@ export default function Menu(props) {
     <nav className="navigation">
       <form className="navigation__form">
         <h2 className="navigation__logo">Instagram</h2>
-        <input className="navigation__text" type="text" placeholder="🔎︎"></input>
+        <input className="navigation__text" type="text" placeholder="🔎︎ Search..."></input>
       </form>
       <ul className="navigation__list">
         <li className="navigation__item"><img src="https://cdn.pixabay.com/photo/2013/07/12/12/56/home-146585_960_720.png" alt="Home"></img></li>

@@ -1,0 +1,9 @@
+{
+    "user": {
+        "main":[
+            {"id":0,"login":"piotr","password":"test","image":"https://cdn.pixabay.com/photo/2020/05/17/20/21/cat-5183427_960_720.jpg","desc":"Hello I m Piotr!","posts":[0,1,2], "favourite":[3,4,5]},
+            {"id":1,"login":"rafal","password":"test","image":"https://cdn.pixabay.com/photo/2016/07/30/21/37/mario-1558062_960_720.jpg","desc":"Hello I m Rafal!","posts":[3,4,5], "favourite":[0,1]},
+            {"id":2,"login":"andrzej","password":"test","image":"https://cdn.pixabay.com/photo/2017/07/15/13/45/rapper-2506492_960_720.jpg","desc":"Hello I m Andrzej","posts":[0,1], "favourite":[0,1]}
+        ]
+    }
+}
