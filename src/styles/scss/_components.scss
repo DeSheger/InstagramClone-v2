@@ -177,8 +177,7 @@
     left: 0;
     right: 0;
 
-    height: 100%;
-    width: 100%;
+    
 
     &__form {
         display: flex;
@@ -201,7 +200,7 @@
 
     &__text {
         height: 36px;
-        padding: 0 6px;
+        padding: 0 12px;
         width: 50%;
         border: 1px solid $borderColor;
         border-radius: 4px;
@@ -261,6 +260,7 @@
     height: auto;
 
     margin-top: 90px;
+    margin-bottom: 90px;
 
     .post {
         display: flex;
@@ -305,8 +305,9 @@
                 height: 100%;
                 border: none;
                 color: $fontBlue;
-                font-size: 10px;
+                font-size: 14px;
                 background-color: #fff;
+                cursor: pointer;
             }
         }
 
