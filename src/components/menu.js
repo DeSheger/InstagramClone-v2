@@ -1,27 +1,29 @@
 import Start from "../containers/Start";
 import Home from "../containers/Home";
-
+import Favourite from "../containers/Favourite";
 
 export const showContainer = (state) => {
-    const findActiveContainer = state.map(container => {
-      if (container.value) {
-        switch (container.name) {
-          case 'Start':
-            return <Start/>;
-            case 'Home':
-              return <Home/>;
-          default:
-            return undefined;
-        }
+  const findActiveContainer = state.map(container => {
+    if (container.value) {
+      switch (container.name) {
+        case 'Start':
+          return <Start />;
+        case 'Home':
+          return <Home />;
+        case 'Favourite':
+          return <Favourite />;
+        default:
+          return undefined;
       }
-    });
-    const createNewState = findActiveContainer.filter(item => item !== undefined)
-    return createNewState[0];
+    }
+  });
+  const createNewState = findActiveContainer.filter(item => item !== undefined)
+  return createNewState[0];
 }
 
 export default function Menu(props) {
 
-  return(
+  return (
     <nav className="navigation">
       <form className="navigation__form">
         <h2 className="navigation__logo">Instagram</h2>
