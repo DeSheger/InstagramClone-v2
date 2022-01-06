@@ -1,15 +1,17 @@
 import React from "react";
 import Menu from "../components/menu";
 import PostRenderer from "../components/postRenderer";
+import { useState } from "react";
 
-export default class Home extends React.Component {
+export default function Home(props) {
 
-    render() {
-        return (
-            <div className="home">
-                <Menu />
-                <PostRenderer />
-            </div>
-        );
-    }
+    const [descActive, setDescActive] = useState(true);
+
+    return (
+        <div className="home">
+            <Menu />
+            <PostRenderer descActive={descActive} />
+        </div>
+    );
+
 }

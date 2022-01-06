@@ -28,12 +28,12 @@ function Comment(props) {
 }
 
 export default function Post(props) {
-    
+
     return (
         <div className="post">
-            <Image src={props.src}/>
-            <Description desc={props.desc} date={props.date}/>
-            <Comment />
+            <Image src={props.src} />
+            {props.descActive ? <Description desc={props.desc} date={props.date} /> : null}
+            {props.descActive ? <Comment /> : null}
         </div>
     );
 }

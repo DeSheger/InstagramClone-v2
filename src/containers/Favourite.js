@@ -1,13 +1,17 @@
 import React from "react";
 import Menu from "../components/menu";
+import PostRenderer from "../components/postRenderer";
+import { useState } from "react";
 
-export default class Favourite extends React.Component {
+export default function Favourite(props) {
 
-    render() {
-        return (
-            <div className="favourite">
-                <Menu />
-            </div>
-        );
-    }
+    const [descActive, setDescActive] = useState(false);
+
+    return (
+        <div className="favourite">
+            <Menu />
+            <PostRenderer descActive={descActive} />
+        </div>
+    );
+
 }
