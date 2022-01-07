@@ -1,11 +1,17 @@
 import React from "react";
+import Menu from "../components/menu";
+import PostRenderer from "../components/postRenderer";
+import { useState } from "react";
 
-class Explore extends React.Component {
+export default function Explore(props) {
 
-    render() {
-        return (
-            <>
-            </>
-        );
-    }
+    const [descActive, setDescActive] = useState(false);
+
+    return (
+        <div className="explore">
+            <Menu />
+            <PostRenderer descActive={descActive} row={true}/>
+        </div>
+    );
+
 }
