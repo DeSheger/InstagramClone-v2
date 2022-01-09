@@ -1,4 +1,4 @@
-import user_info from "../data/users_data/users";
+
 
 export default function ProfileInfo(props) {
     return (

@@ -381,3 +381,14 @@
         width: 600px;
     }
 }
+
+.profile__info {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin: 60px 0;
+
+  @media (min-width:800px) {
+    width: 600px;
+}
+}
