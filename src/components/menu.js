@@ -4,6 +4,7 @@ import Favourite from "../containers/Favourite";
 import { useDispatch, useSelector } from "react-redux";
 import { containerHandler } from "../features/container/containerSlice";
 import Explore from "../containers/Explore";
+import Profile from "../containers/Profile";
 
 export const showContainer = (state) => {
   const findActiveContainer = state.map(container => {
@@ -17,6 +18,8 @@ export const showContainer = (state) => {
           return <Explore />;
         case 'Favourite':
           return <Favourite />;
+        case 'Profile':
+          return <Profile />;
         default:
           return undefined;
       }
@@ -39,7 +42,7 @@ export default function Menu(props) {
         <li className="navigation__item" onClick={() => dispatch(containerHandler({ name: "Home" }))}><img src="https://cdn.pixabay.com/photo/2013/07/12/12/56/home-146585_960_720.png" alt="Home"></img></li>
         <li className="navigation__item" onClick={() => dispatch(containerHandler({ name: "Explore" }))}><img src="https://cdn.pixabay.com/photo/2013/07/12/16/56/compass-151536_960_720.png" alt="Explore"></img></li>
         <li className="navigation__item" onClick={() => dispatch(containerHandler({ name: "Favourite" }))}><img src="https://cdn.pixabay.com/photo/2017/01/03/09/34/heart-1948970_960_720.png" alt="Favourite"></img></li>
-        <li className="navigation__item"><img src="https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249_960_720.png" alt="Profile"></img></li>
+        <li className="navigation__item" onClick={() => dispatch(containerHandler({ name: "Profile" }))}><img src="https://cdn.pixabay.com/photo/2016/08/31/11/54/user-1633249_960_720.png" alt="Profile"></img></li>
       </ul>
     </nav>
   )

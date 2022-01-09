@@ -1,11 +1,14 @@
-import React from "react";
+import Menu from "../components/menu";
+import ProfileInfo from "../components/profileInfo";
+import PostRenderer from "../components/postRenderer";
 
-class Profile extends React.Component {
+export default function Profile(props) {
+  return (
+    <div className="profile">
+      <Menu />
+      <ProfileInfo />
+      <PostRenderer />
+    </div>
+  );
 
-    render() {
-        return (
-            <>
-            </>
-        );
-    }
 }
