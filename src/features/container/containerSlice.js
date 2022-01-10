@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { current } from "@reduxjs/toolkit";
 
 const initialState = [
-    {name: 'Home', value: true},
+    {name: 'Home', value: false},
     {name: 'Explore', value: false},
     {name: 'Favourite', value: false},
     {name: 'Profile', value: false},
-    {name: 'Start', value: false},
+    {name: 'Start', value: true},
 ]
 
 const containerSlice = createSlice({
