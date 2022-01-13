@@ -5,7 +5,7 @@ const initialState = {
     username: "",
 }
 
-const sessionSlice = ({
+const sessionSlice = createSlice({
     name: "session",
     initialState,
     reducers: {
@@ -18,3 +18,4 @@ const sessionSlice = ({
 
 export const { createSession } = sessionSlice.actions;
 export default sessionSlice.reducer;
+
