@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { authorizationLoginHandler, authorizationPasswordHandler } from "../features/authorization/authorizationSlice";
+import authorizationHandler from "./authorization";
 
 export default function Login(props) {
     const authorization = useSelector(state => state.authorization)
@@ -11,7 +12,7 @@ export default function Login(props) {
             <div className="login__banner">
                 <div className="login__bannerIMG"></div>
             </div>
-            <form action="http://localhost:6000/userInfo" className="login__form">
+            <form className="login__form">
                 <h2 className="login__logo">Instagram</h2>
 
                 <label for="loginID" className="login__name">
@@ -26,7 +27,8 @@ export default function Login(props) {
                         value={authorization.password}></input>
                 </label>
 
-                <input type="submit" className="login__submit" value="Log In"></input>
+                <input type="button" className="login__submit" value="Log In" 
+                onClick={() => console.log(authorizationHandler(authorization.login, authorization.password))}></input>
             </form>
         </div>
     );
