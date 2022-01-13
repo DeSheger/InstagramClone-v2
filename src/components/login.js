@@ -28,7 +28,7 @@ export default function Login(props) {
                 </label>
 
                 <input type="button" className="login__submit" value="Log In" 
-                onClick={() => console.log(authorizationHandler(authorization.login, authorization.password))}></input>
+                onClick={() => authorizationHandler(authorization.login, authorization.password)}></input>
             </form>
         </div>
     );
