@@ -2,11 +2,11 @@ import user_info from '../data/users_data/users'
 
 export default function authorizationHandler(username, password) {
     console.log(username, password)    
-    let userLogged = false;
+    const userSession = {userLogged: false,username: null, userID: null};
     user_info.user.main.map(user => {
         if(user.login === username) {
             if(user.password === password) {
-                userLogged = true;
+                userSession = {userLogged: true,username: user.login, userID: user.id};
             } else {
                 return false
             }
@@ -15,5 +15,10 @@ export default function authorizationHandler(username, password) {
         }
     })
 
-    return userLogged;
+    if(userSession.userLogged) {
+        return userSession;
+    } else {
+        return false;
+    }
+    
 }
