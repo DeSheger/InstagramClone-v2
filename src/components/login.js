@@ -40,6 +40,7 @@ export default function Login(props) {
                             dispatch(createSession({ isLogged: info.userLogged, username: info.username, userID: info.userID }))
                         } else {
                             alert("login or password are incorrect")
+                            alert("login: piotr password: test \n login: rafal password: test");
                         }
 
                         //
