@@ -385,10 +385,44 @@
 .profile__info {
   display: flex;
   width: 100%;
+  height: auto;
   flex-direction: row;
-  margin: 60px 0;
+  margin: 90px 10px;
+
+  &-avatar {
+      height: 100%;
+      width: 50%;
+      border: 1px solid red;
+      border-radius: 50%;
+      img {
+          height: 100%;
+          width: 100%;
+      }
+  }
+
+  &-desc {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 50%;
+  }
+
+    &-name {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    &-status {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    &-about {
+        flex-grow: 1;
+        width: 100%;
+    }
 
   @media (min-width:800px) {
     width: 600px;
-}
+    }
 }
