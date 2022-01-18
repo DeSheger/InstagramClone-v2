@@ -1,13 +1,25 @@
 import Post from "./post";
 import post_info from "../data/post_data/post";
 import user_info from "../data/users_data/users";
+import { useSelector } from "react-redux";
 
 function PostsCounter(props) {
-    let posts = [];
+    const userID = useSelector(state => state.session.userID)
 
-    posts = post_info.post.main.map(item => <Post key={item.id} 
+    let posts = [];
+    
+    posts = post_info.post.main.map(item => <Post key={item.id} id={item.id}
         descActive={props.descActive} src={item.picture} desc={item.desc} date={item.date}/>)
-    console.log(...posts)
+    if(props.userFavourite) {
+        posts = user_info.user.main[userID].favourite.map(item => <Post key={item} id={item}
+            descActive={props.descActive} src={post_info.post.main[item].picture} 
+            desc={post_info.post.main[item].desc} date={post_info.post.main[item].date}/>)
+    } else if (props.userPosts) {
+        posts = user_info.user.main[userID].posts.map(item => <Post key={item} id={item}
+            descActive={props.descActive} src={post_info.post.main[item].picture} 
+            desc={post_info.post.main[item].desc} date={post_info.post.main[item].date}/>)
+    }
+    
     return [...posts];
 }
 
@@ -19,7 +31,7 @@ export default function PostRenderer(props) {
     }
     return (
         <div className={post__container}>
-            <PostsCounter descActive={props.descActive}/>
+            <PostsCounter descActive={props.descActive} userFavourite={props.userFavourite} userPosts={props.userPosts}/>
         </div>
     )
 }

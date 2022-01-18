@@ -10,7 +10,7 @@ export default function Favourite(props) {
     return (
         <div className="favourite">
             <Menu />
-            <PostRenderer descActive={descActive} row={true}/>
+            <PostRenderer descActive={descActive} row={true} userFavourite={true}/>
         </div>
     );
 

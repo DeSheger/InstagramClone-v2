@@ -10,7 +10,7 @@ export default function Profile(props) {
     <div className="profile">
       <Menu />
       <ProfileInfo />
-      <PostRenderer descActive={descActive} row={true}/>
+      <PostRenderer descActive={descActive} row={true} userPosts={true}/>
     </div>
   );
 
