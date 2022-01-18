@@ -28,7 +28,6 @@ function Comment(props) {
 }
 
 export default function Post(props) {
-
     return (
         <div className="post">
             <Image src={props.src} />

@@ -1,4 +1,3 @@
-import { createSlice } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { authorizationLoginHandler, authorizationPasswordHandler } from "../features/authorization/authorizationSlice";
@@ -9,13 +8,6 @@ import authorizationHandler from "./authorization";
 export default function Login(props) {
     const authorization = useSelector(state => state.authorization)
     const dispatch = useDispatch();
-
-    const isLogged = useSelector(state => state.session.isLogged);
-
-    if (isLogged) {
-        dispatch(containerHandler({ name: "Home" }))
-    }
-
     return (
         <div className="login">
             <div className="login__banner">
@@ -37,11 +29,18 @@ export default function Login(props) {
                 </label>
 
                 <input type="button" className="login__submit" value="Log In"
-                    onClick={() => authorizationHandler(authorization.login, authorization.password) ?
+                    onClick={() => {
+                        
+                        let info = authorizationHandler(authorization.login, authorization.password) 
+                        if(info) {
+                            dispatch(containerHandler({ name: "Home" }))
+                            dispatch(createSession({ isLogged: info.userLogged, username: info.username, userID: info.userID }))
+                        } else {
+                            alert("login or password are incorrect")
+                        }
 
-                        dispatch(createSession({ isLogged: true, username: "piotr" }))
-                        : null
-                    }></input>
+                        //
+                    }}></input>
             </form>
         </div>
     );

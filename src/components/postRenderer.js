@@ -7,7 +7,7 @@ function PostsCounter(props) {
 
     posts = post_info.post.main.map(item => <Post key={item.id} 
         descActive={props.descActive} src={item.picture} desc={item.desc} date={item.date}/>)
-    posts = user_info.user.main.posts.map(item => console.log(item))
+    console.log(...posts)
     return [...posts];
 }
 

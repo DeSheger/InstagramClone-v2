@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     isLogged: false,
     username: "",
+    userID: null,
 }
 
 const sessionSlice = createSlice({
@@ -12,6 +13,7 @@ const sessionSlice = createSlice({
         createSession(state, action) {
             state.isLogged = true;
             state.username = action.payload.username;
+            state.userID = action.payload.userID;
         }
     }
 })

@@ -26,6 +26,7 @@ export const showContainer = (state) => {
     }
   });
   const createNewState = findActiveContainer.filter(item => item !== undefined)
+  console.log(createNewState[0])
   return createNewState[0];
 }
 
